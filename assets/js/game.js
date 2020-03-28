@@ -1,6 +1,7 @@
 var playerName = window.prompt("What is your robot's name?");
 var playerHealth = 100;
 var playerAttack = 10;
+var playerMoney = 10;
 
 // You can also log multiple values at once like this 
 console.log(playerName, playerAttack, playerHealth);
@@ -18,6 +19,25 @@ var promptFight = window.prompt("Would you like to FIGHT or SKIP this battle? En
 // if player choses to fight, then fight
 if (promptFight === "fight" || promptFight === "FIGHT") {
   }
+//if player choses to skip
+else if (promptFight === "skip" || promptFight === "SKIP") {
+    // confirm user wants to skip 
+    var confirmSkip = window.confirm("Are you sure you'd like to quit?");
+} else {
+    window.alert("You need to pick a valid option. Try again!");
+}
+
+//if yes (true), leave fight 
+if (confirmSkip) {
+    window.alert(playerName + " has decided to skip this fight. Goodbye!");
+
+// subtract money from playerMoney for skipping
+    playerMoney = playerMoney -2; 
+    
+// if no (false), ask question again by running fight() again 
+} else { 
+    fight();
+}
         
 // remove enemy's health by subtracting the amount of set in the playerAttack variable 
 enemyHealth = enemyHealth - playerAttack;
@@ -52,13 +72,6 @@ if (playerHealth <= 0) {
 }  else {
   window.alert(playerName + " still has " + playerHealth + " health left. ");
 } 
-
-//if player choses to skip
-if (promptFight === "skip" || promptFight === "SKIP") {
-    window.alert(playerName + " has chosen to skip the fight!");
-} else {
-    window.alert("You need to pick a valid option. Try again!");
-}
 
 // Subtract the value of `enemyAttack` from the value of `playerHealth` and use that result to update the value in the `playerHealth` variable.
 playerHealth = playerHealth - enemyAttack;
