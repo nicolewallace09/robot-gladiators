@@ -134,7 +134,7 @@ var endGame = function() {
     else {
         window.alert("Thank you for playing Robot Gladitaors! Come back soon!");
     }
-};
+}
 
 var shop = function() {
     // ask player what they'd like to do
