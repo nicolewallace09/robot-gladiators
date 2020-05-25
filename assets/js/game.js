@@ -10,7 +10,7 @@ var playerAttack = 10;
 var playerMoney = 10;
 
 // You can also log multiple values at once like this 
-console.log(playerName, playerAttack, playerHealth);
+//console.log(playerName, playerAttack, playerHealth);
 
 var enemyNames = ["Roborto", "Amy Android", "Robo Trumble"];
 var enemyHealth = 50;
@@ -40,12 +40,13 @@ var fight = function(enemyName) {
     // remove enemy's health by subtracting the amount of set in the playerAttack variable 
     // generate random damage value based on player's attack power 
     var damage = randomNumber(playerAttack - 3, playerAttack);
+    // always makes sure that 0 is lowest value 
     enemyHealth = Math.max(0, enemyHealth - damage); 
     console.log(
         playerName + " attacked " + enemyName + ". " + enemyName + " now has " + enemyHealth + " health remaining."); 
 
     //check enemy's health 
-    if (enemyHealth <=0) { 
+    if (enemyHealth <= 0) { 
         window.alert(enemyName + " has died!");
         playerMoney = playerMoney + 20 
         window.alert(playerName + "now has $" + playerMoney);
@@ -89,7 +90,7 @@ var startGame = function() {
 
 for(var i = 0; i < enemyNames.length; i++) {
     if (playerHealth > 0) {
-        // let uset know what round they are in. Arrays start at 0 so it needs to have 1 added to it 
+        // let use know what round they are in. Arrays start at 0 so it needs to have 1 added to it 
         window.alert("Welcome to Robot Gladiators! Round " + ( i + 1));
 
         // pick new enemy to fight based on the index of the enemyNames array
@@ -142,7 +143,7 @@ var endGame = function() {
         startGame();
     }
     else {
-        window.alert("Thank you for playing Robot Gladitaors! Come back soon!");
+        window.alert("Thank you for playing Robot Gladiators! Come back soon!");
     }
 }
 
@@ -171,7 +172,7 @@ var shop = function() {
             if (playerMoney >=7) { 
                 window.alert("Upgrading player's attack by 6 for 7 dollars.");
 
-            // increase attach and decreasee moneu
+            // increase attach and decrease money
             playerAttack = playerAttack + 6;
             playerMoney = playerMoney - 7;
             } 
