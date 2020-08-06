@@ -38,8 +38,8 @@ var fight = function(enemy) {
     if (enemy.health <= 0) { 
         window.alert(enemy.name + " has died!");
         playerInfo.money = playerInfo.money + 20 
-        window.alert(playerInfo.name + "now has $" + playerInfo.money);
-        console.log(playerInfo.name + "now has $" + playerInfo.money);
+        window.alert(playerInfo.name + " now has $" + playerInfo.money);
+        console.log(playerInfo.name + " now has $" + playerInfo.money);
         break;
 
      } else {
@@ -166,6 +166,14 @@ var shop = function() {
     }
 
     
+}
+
+// function to set name
+var getPlayerName = function() {
+    var name = ''; 
+
+    console.log("Your robot's name is" + name); 
+    return name; 
 }
 
 var playerInfo = {
