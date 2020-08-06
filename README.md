@@ -17,7 +17,7 @@ The user should clone the repo and open the index file into their browser. Then 
 
 ## Usage 
 This application will allow users choose a fighter and play against the computer in a series of battles. The user would be able to use potions to gain back their health. <br>
-Please view deployed application on [Heroku](https://nicolewallace09.github.io/robot-gladiators/scree)<br>
+Please view deployed application on [Git Hub Pages](https://nicolewallace09.github.io/robot-gladiators/scree)<br>
 <img src='assets/images/screenshot.png'>
 
 ## License 
